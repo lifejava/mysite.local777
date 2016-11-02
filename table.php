@@ -1,24 +1,4 @@
-<?php
-  $cols = 10;
-  $rows = 10;
-  $color = "lightgrey";
-  function drawTable($cols=10, $rows=10, $color='yellow'){
-    echo "<table border='1'>";
-    for ($tr = 1; $tr <= $rows; $tr++) {
-      echo "<tr>";
-      for ($td = 1; $td <= $cols; $td++) {
-        if($tr == 1 || $td == 1) {
-          echo "<th style='background: $color '>" .  $tr*$td . "</th>";
-        } else {
-          echo "<td>" . $tr*$td . "</td>";
-        }
 
-      }
-      echo "</tr>";
-    }
-    echo "</table>";
-  }
-?>
 <!DOCTYPE html>
 <html>
 

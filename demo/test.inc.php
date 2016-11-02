@@ -1,7 +1,5 @@
+<h2>INCLUDED</h2>
 <?php
-/**
- * Created by PhpStorm.
- * User: админ
- * Date: 02.11.2016
- * Time: 16:27
- */
+function foo() {
+    
+}

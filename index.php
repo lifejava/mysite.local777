@@ -1,36 +1,12 @@
 <?php
-  // Установка локали и даты
-  setlocale(LC_ALL, "russian");
+/* * Получаем текущий час в виде строки от 00 до 23 * 
+и приводим строку к целому числу от 0 до 23 */
+// Установка локали и даты
+setlocale(LC_ALL, "russian");
 $day = strftime('%d');
 $mon = strftime('%B');
 $mon = iconv('windows-1251', 'utf-8', $mon);
 $year = strftime('%Y');
-$leftMenu = [
-  ['link'=>'Домой', 'href'=>'index.php'],
-  ['link'=>'О нас', 'href'=>'about.php'],
-  ['link'=>'Контакты', 'href'=>'contact.php'],
-  ['link'=>'Таблица умножения', 'href'=>'table.php'],
-  ['link'=>'Калькулятор', 'href'=>'calc.php']
-];
-function drawMenu($menu, $vertical=true){
-  $style = "";
-  if (!$vertical) {
-    $style = " style='display:inline; margin-right:15px'";
-  }
-  echo "<ul>";
-  foreach ($menu as $item) {
-    echo "<li$style>";
-    echo "<a href='{$item['href']}'>{$item["link"]}</a>";
-    echo "</li>";
-
-  }
-  echo "</ul>";
-}
-?>
-<?php
-/* * Получаем текущий час в виде строки от 00 до 23 * 
-и приводим строку к целому числу от 0 до 23 */
-
 $hour = (int)strftime('%H');
 $welcome = '';// Инициализируем переменную для приветствия
 
@@ -59,8 +35,6 @@ if ($hour >= 0 && $hour < 6) {
 
   <div id="header">
     <!-- Верхняя часть страницы -->
-    <img src="logo.gif" width="187" height="29" alt="Наш логотип" class="logo" />
-    <span class="slogan">приходите к нам учиться</span>
     <!-- Верхняя часть страницы -->
   </div>
 
